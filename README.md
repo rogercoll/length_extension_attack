@@ -28,8 +28,7 @@ This will print the new md5 without knowing the key.
 
 To recreate the example with the `key` and openssl to compare with the Go output, can be done with the following commands:
 
-```
-//we must create a padding block following the same structure as the md5 algorith will create
+First of all, we must create a padding block following the same structure as the md5 algorith will create
 
 ```
 echo -n ' world' > toAdd
@@ -47,4 +46,4 @@ cat key message padding2.bin toAdd | openssl dgst -md5 -binary | xdd -p
 // a1b18483023ea03a9c3e68c9bf00f650
 ```
 
-
+TODO => More documentation on md5 standard library modifications
