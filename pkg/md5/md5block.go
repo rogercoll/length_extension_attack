@@ -8,7 +8,6 @@ package md5
 
 import (
 	"encoding/binary"
-	"fmt"
 	"math/bits"
 )
 
@@ -128,7 +127,6 @@ func blockGeneric(dig *digest, p []byte) {
 func BlockGeneric2(dig *digest, p []byte) {
 	// load state
 	a, b, c, d := dig.s[0], dig.s[1], dig.s[2], dig.s[3]
-	fmt.Println(a, b, c, d)
 	for i := 0; i <= len(p)-BlockSize; i += BlockSize {
 		// eliminate bounds checks on p
 		q := p[i:]
